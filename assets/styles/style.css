@@ -46,7 +46,10 @@ footer i{
     min-height: 168px;
     width: auto;
 }
-@media screen(max-width:1200) {
+.contact{
+    max-width: 30vw;
+}
+@media screen and(max-width:1200) {
     .bilboard{
         min-height: 60vh; 
      }
