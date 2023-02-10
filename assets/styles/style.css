@@ -1,0 +1,21 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+    color: aliceblue;
+    
+    /*
+    color: #EDEDED;
+    color: #444444;
+    color:#171717;
+    color:#DA0037
+    */
+}
+header img{
+    width: 30%;
+    
+}
+.line{
+    border-bottom: 1px solid #EDEDED;
+}
