@@ -10,15 +10,44 @@
     color: #444444;
     color:#171717;
     color:#DA0037
+   color:#C92C6D;
     */
 }
 header img{
     width: 30%;
+   
     
 }
 .line{
     border-bottom: 1px solid #EDEDED;
 }
-i{
-    width: 100%;
+.bilboard{
+   min-height: 55vh; 
+}
+footer{
+    border-top: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+   
+}
+footer i{
+    color: #444444;;
+}
+.btn-new{
+    border:1px solid #C92C6D;
+    color: #C92C6D;
+}
+.btn-new:hover{
+    border:1px solid #C92C6D;
+    color: #EDEDED;
+    background-color: #C92C6D;
+}
+
+.card-img-top{
+    min-height: 168px;
+    width: auto;
+}
+@media screen(max-width:1200) {
+    .bilboard{
+        min-height: 60vh; 
+     }
 }
