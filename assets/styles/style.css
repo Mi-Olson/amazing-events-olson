@@ -21,9 +21,12 @@ header img{
 .line{
     border-bottom: 1px solid #EDEDED;
 }
-.bilboard{
-   min-height: 55vh; 
+main{
+    min-height: 80vh;
 }
+/* .bilboard{
+   min-height: 55vh; 
+} */
 footer{
     border-top: 2px solid #444444;
     border-bottom: 2px solid #444444;
@@ -49,8 +52,22 @@ footer i{
 .contact{
     max-width: 30vw;
 }
-@media screen and(max-width:1200) {
-    .bilboard{
-        min-height: 60vh; 
+.table .col
+{
+    border: 2px solid  #C92C6D;
+    height:4em;
+
+}
+.t-row h4{
+   
+    height:3em; 
+    color: #EDEDED;
+    background-color: #C92C6D;
+    opacity: 0.8;
+
+
+@media screen and(max-width:1200px) {
+    main{
+        min-height: auto; 
      }
 }
