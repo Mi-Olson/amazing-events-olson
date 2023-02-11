@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: black;
     color: aliceblue;
+  
     
     /*
     color: #EDEDED;
@@ -24,22 +25,30 @@ header img{
 main{
     min-height: 80vh;
 }
-/* .bilboard{
-   min-height: 55vh; 
-} */
+.img{
+    transform-origin: bottom right 60px;
+}
+.shadow{
+    /* color:#C92C6D; */
+    text-shadow: #C92C6D 1px 0 10px;
+    font-family: 'Tourney', cursive;
+    
+}
 footer{
     border-top: 2px solid #444444;
     border-bottom: 2px solid #444444;
    
 }
-footer i{
-    color: #444444;;
+footer h2{
+    font-style: italic ;
 }
+
 .btn-new{
     border:1px solid #C92C6D;
     color: #C92C6D;
 }
-.btn-new:hover{
+.btn-new:hover,
+.btn-secondary{
     border:1px solid #C92C6D;
     color: #EDEDED;
     background-color: #C92C6D;
@@ -49,21 +58,36 @@ footer i{
     min-height: 168px;
     width: auto;
 }
+.card-title{
+    font-family: 'Tourney', cursive;
+    text-shadow: #C92C6D 1px 0 10px;
+}
 .contact{
     max-width: 30vw;
 }
-.table .col
+.table .col,
+.t-row
 {
-    border: 2px solid  #C92C6D;
-    height:4em;
+    border-top: 0.1px solid  #444444;
+    border-left: 0.1px solid #444444;;
+    height:2rem;
+    font-size: 1rem;
 
 }
+.table{
+    border-bottom: 0.1px solid  #C92C6D;
+    border-right: 0.1px solid  #C92C6D;
+    
+}
 .t-row h4{
-   
-    height:3em; 
+    font-weight: 100;
+    height:2rem; 
     color: #EDEDED;
-    background-color: #C92C6D;
-    opacity: 0.8;
+    background-color: #444444;
+    font-family: 'Tourney', cursive;
+    /* text-shadow: #C92C6D 1px 0 10px; */
+    /* opacity: 0.8; */
+}
 
 
 @media screen and(max-width:1200px) {
