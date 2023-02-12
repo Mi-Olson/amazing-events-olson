@@ -193,6 +193,27 @@ footer h2 {
     }
 }
 
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    
+   
+}
+.row-details{
+    border: 2px solid #C92C6D;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #444444;
+    /* width:50%;
+    height: 50%; */
+
+}
+.container-details{
+ margin-top: 10%;
+ margin-bottom: 10%;
+}
 
 
 @media screen and(max-width:1200px) {
