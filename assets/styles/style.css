@@ -222,7 +222,9 @@ footer h2 {
     margin-top: 10%;
     margin-bottom: 10%;
 }
-
+/* .main_up{
+    min-height: 10%;
+} */
 
 @media screen and (max-width:1024px) {
     /* main {
