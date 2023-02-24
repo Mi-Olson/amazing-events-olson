@@ -1,4 +1,4 @@
-st events = {
+const events = {
     "currentDate": "2022-09-01",
     "events": [
         {
@@ -458,7 +458,7 @@ function create_cards(events) {
     for (const event of events.events) {
         let day_event = Date.parse(event.date)
 
-        if (currentDate >= day_event) {
+        if (currentDate > day_event) {
             card += `<div class="card m-1" style="width: 15rem;">
             <img src="${event.image}" class="card-img-top p-3" style="max-height: 7vh" alt="${event.category}">
             <div class="card-body">
@@ -467,7 +467,7 @@ function create_cards(events) {
               </p>
               <div class="navbar">
                 <p>Price U$S ${event.price}</p>
-                <a href="./details.html#card-one" class="btn btn-sm btn-new">Go Details</a>
+                <a href="./details.html" class="btn btn-sm btn-new">More Info</a>
               </div>
             </div>
             </div>`;
