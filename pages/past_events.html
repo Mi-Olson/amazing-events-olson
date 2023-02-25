@@ -21,21 +21,35 @@
 
 <body>
   <header>
-    <nav class="navbar line ">
+    <nav class="navbar line navbar-expand-lg">
 
-      <form class="container-fluid justify-content-start col-12 mt-3">
-        <div class="col-12 col-sm-5 ms-3">
+      <div class="container-fluid">
+        <div class="col-8 col-sm-5 col-ms-5">
           <img src="../assets/img/Logo Amazing Events.png" alt="logo">
         </div>
-        <div class="navbar gap-3 justify-content-end col-6">
 
-          <a href="../index.html" class="btn btn-sm btn-outline-light" role="button">Home</a>
-          <a href="./upcoming_events.html" class="btn btn-sm  btn-outline-light" role="button">Upcoming Events</a>
-          <a href=" #" class="btn btn-sm btn-secondary" role="button">Past Events</a>
-          <a href="./contact.html" class="btn btn-sm btn-outline-light" role="button">Contact</a>
-          <a href="./stats.html" class="btn btn-sm btn-outline-light" role="button">Stats</a>
+        <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="offcanvas offcanvas-end navbar-dark bg-dark " tabindex="-1" id="navbarOffcanvasLg"
+          aria-labelledby="navbarOffcanvasLgLabel">
+
+          <div class="navbar gap-3 justify-content-end">
+
+            <a href="../index.html" class="btn  btn-outline-light" role="button">Home</a>
+            <a href="./upcoming_events.html" class="btn   btn-outline-light" role="button">Upcoming Events</a>
+            <a href=" #" class="btn  btn-secondary" role="button">Past Events</a>
+            <a href="./contact.html" class="btn  btn-outline-light" role="button">Contact</a>
+            <a href="./stats.html" class="btn  btn-outline-light" role="button">Stats</a>
+            <button type="button" class="btn-close  navbar-toggler bg-body-tertiary " data-bs-toggle="offcanvas"
+              data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
         </div>
-      </form>
+      </div>
     </nav>
 
   </header>
@@ -44,11 +58,11 @@
       <i class="bi bi-arrow-bar-left i_start"></i>
       <div class="square one"></div>
       <div class="square two "></div>
-      <div class="square three "></div>
-      <div class="square one"></div>
+      <div class="square three  d-none d-sm-block "></div>
+      <div class="square one  d-none d-sm-block"></div>
       <h1 class="shadow">PAST EVENTS</h1>
-      <div class="square one"></div>
-      <div class="square two"></div>
+      <div class="square one  d-none d-sm-block"></div>
+      <div class="square two  d-none d-sm-block"></div>
       <div class="square one"></div>
       <div class="square three "></div>
       <i class="bi bi-arrow-bar-right i_start"></i>

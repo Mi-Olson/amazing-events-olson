@@ -452,23 +452,25 @@ const events = {
 
 function create_cards(events) {
   let card = ``
- 
+
 
 
   for (const event of events.events) {
-    
 
 
-    card += `<div class="card m-1" style="width: 15rem;">
-        <img src="${event.image}" class="card-img-top p-3" style="max-height: 7vh" alt="${event.category}">
+
+    card += `<div  class="card-group">
+             <div class="card m-1" style="width: 15rem; ">
+              <img src="${event.image}" class="card-img-top p-3" style="max-height: 7vh" alt="${event.category}">
         <div class="card-body">
           <h5 class="card-title text-center" style="min-height: 7vh;">${event.name}</h5>
-          <p class="card-text text-center" style="min-height: 11vh;" >${event.description}
+          <p class="card-text text-center" style="min-height: 11vh;max-height: 11vh;" >${event.description}
           </p>
-          <div class="navbar">
-            <p>Price U$S ${event.price}</p>
+          <div class="navbar card-footer">
+            <p >Price U$S ${event.price}</p>
             <a href="./pages/details.html" class="btn btn-sm btn-new">More Info</a>
           </div>
+        </div>
         </div>
         </div>`;
 

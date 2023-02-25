@@ -51,9 +51,12 @@ footer h2 {
     font-style: italic;
 }
 
-.btn-new {
+.btn-new,
+.btn-secondary:hover {
     border: 1px solid #C92C6D;
     color: #C92C6D;
+    background-color: transparent;
+
 }
 
 .btn-new:hover,
@@ -62,7 +65,8 @@ footer h2 {
     color: #EDEDED;
     background-color: #C92C6D;
 }
-.i_start{
+
+.i_start {
     font-size: 40px;
 }
 
@@ -76,6 +80,18 @@ footer h2 {
     text-shadow: #C92C6D 1px 0 10px;
 }
 
+.card-group {
+    border-radius: 8px;
+    border: 1px solid #444444 !important;
+    box-shadow: 7px 3px 28px 4px #C92C6D;
+    -webkit-box-shadow: 7px 3px 28px 4px #C92C6D;
+    -moz-box-shadow: 7px 3px 28px 4px #C92C6D;
+}
+
+.card {
+    border: none;
+}
+
 .contact {
     max-width: 30vw;
 }
@@ -84,7 +100,7 @@ footer h2 {
 .t-row {
     border-top: 0.1px solid #444444;
     border-left: 0.1px solid #444444;
-    
+
     height: 2rem;
     font-size: .8rem;
     flex-wrap: wrap;
@@ -213,7 +229,7 @@ footer h2 {
     display: flex;
     flex-wrap: wrap;
     background-color: #444444;
-   
+
 
 }
 
@@ -221,14 +237,4 @@ footer h2 {
     padding: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
-}
-
-
-@media screen and (max-width:1024px) {
-    /* main {
-        min-height: auto;
-    } */
-    #carouselExample{
-        margin-bottom: 0px!important;
-    }
 }
