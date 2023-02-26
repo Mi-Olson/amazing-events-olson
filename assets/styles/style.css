@@ -16,7 +16,7 @@
 }
 
 header img {
-    width: 30%;
+    width: 20vh;
 
 
 }
@@ -232,9 +232,20 @@ footer h2 {
 
 
 }
+.scroller {
+    height: 300px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
 
 .container-details {
     padding: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
 }
+@media screen  and (min-width: 1024px){
+    .card-text {
+        max-height: 7vh; 
+
+}
+}   
