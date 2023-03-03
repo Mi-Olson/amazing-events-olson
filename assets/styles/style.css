@@ -239,9 +239,10 @@ footer h2 {
 }
 
 .container-details {
-    padding: 10%;
+    /* padding: 10%; */
+ 
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 @media screen  and (min-width: 1024px){
     .card-text {
