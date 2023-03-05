@@ -2,10 +2,10 @@
 console.log(events.events[0]);
 let form_categories = document.getElementById("form_categories")
 let filter = document.getElementById("filter")
-const all_categories = new Set(events.events.map(eve => eve.category))
+const all_categories = new Set((events.events.map(eve => eve.category)).sort())
 let acumcat = []
 let screen_cards=events.events
-let empty_alert=document.getElementById("alert")
+
 
 
 function create_FilterCategories(all_categories) {
