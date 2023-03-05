@@ -1,15 +1,14 @@
+const current_day=Date.parse(events.currentDate)
+let filter_up=events.events.filter((ev)=> (current_day <= Date.parse(ev.date)))
 
-
-
+console.log(filter_up);
 function create_cards(events) {
     let card = ``
-    let currentDate = Date.parse(events.currentDate)
+    
 
 
-    for (const event of events.events) {
-        let day_event = Date.parse(event.date)
-
-        if (currentDate <= day_event) {
+    for (const event of events) {
+    
             card += `<div  class="card-group">
             <div class="card m-1" style="width: 15rem; ">
              <img src="${event.image}" class="card-img-top p-3" style="max-height: 7vh" alt="${event.category}">
@@ -27,13 +26,13 @@ function create_cards(events) {
 
 
 
-        }
+     
 
-    }
+     }
 
     return card
 }
 
 
 let container_card = document.getElementById("up-event");
-container_card.innerHTML = create_cards(events)
+container_card.innerHTML = create_cards(filter_up)

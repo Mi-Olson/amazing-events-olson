@@ -223,6 +223,10 @@ footer h2 {
 
 
 }
+/* .hidden{
+    display: none;
+} */
+
 
 .row-details {
     border: 2px solid #C92C6D;
@@ -232,11 +236,7 @@ footer h2 {
 
 
 }
-.scroller {
-    height: 300px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
+
 
 .container-details {
     /* padding: 10%; */
@@ -249,4 +249,11 @@ footer h2 {
         max-height: 7vh; 
 
 }
-}   
+}
+/* @media screen  and (max-width: 1024px){
+.scroller {
+    height: 300px;
+    overflow-y: none;
+    scroll-snap-type: y mandatory;
+}
+}    */
