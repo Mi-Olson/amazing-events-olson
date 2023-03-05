@@ -223,6 +223,7 @@ footer h2 {
 
 
 }
+
 /* .hidden{
     display: none;
 } */
@@ -240,28 +241,24 @@ footer h2 {
 
 .container-details {
     /* padding: 10%; */
- 
+
     margin-top: 10%;
     margin-bottom: 5%;
 }
-@media screen  and (min-width: 1024px){
+
+@media screen and (min-width: 1024px) {
     .card-text {
-        max-height: 7vh; 
+        max-height: 7vh;
 
-}
-
-}
-@media screen  and (max-width: 1024px){
-.scroller {
-    height: 300px;
-    overflow-y: none;
-    scroll-snap-type: y mandatory;
-}
-}  
-/* @media screen  and (min-width: 768px){ 
-    #navbar_resp{
-        display: flex;
-        flex-direction: column;
     }
 
-} */
+}
+
+@media screen and (max-width: 1024px) {
+    .scroller {
+        height: 300px;
+        overflow-y: none;
+        scroll-snap-type: y mandatory;
+    }
+}
+
