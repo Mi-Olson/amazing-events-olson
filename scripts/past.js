@@ -51,7 +51,7 @@ function create_FilterCategories(all_categories) {
   for (const cat of all_categories) {
     console.log(cat);
     cat_filt += `
-    <div class="form-check ">
+    <div class="form-check col-5 col-md-1 col-sm-1">
             <input class="form-check-input" type="checkbox" name="checkbox" value="${cat}" id="${cat}">
             <label class="form-check-label" for="${cat}">
             ${cat}
@@ -61,7 +61,7 @@ function create_FilterCategories(all_categories) {
 
   }
   cat_filt += `
-  <button type="submit" class="btn btn-sm btn-outline-light" id="filter">filter</button>`
+  <button type="submit" class="btn btn-sm btn-outline-light col-5 col-md-1 col-sm-1" id="filter">filter</button>`
   return cat_filt
 
 }

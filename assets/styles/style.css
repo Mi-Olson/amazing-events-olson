@@ -249,11 +249,19 @@ footer h2 {
         max-height: 7vh; 
 
 }
+
 }
-/* @media screen  and (max-width: 1024px){
+@media screen  and (max-width: 1024px){
 .scroller {
     height: 300px;
     overflow-y: none;
     scroll-snap-type: y mandatory;
 }
-}    */
+}  
+/* @media screen  and (min-width: 768px){ 
+    #navbar_resp{
+        display: flex;
+        flex-direction: column;
+    }
+
+} */
