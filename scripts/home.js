@@ -13,9 +13,9 @@ function create_FilterCategories(all_categories) {
   for (const cat of all_categories) {
     console.log(cat);
     cat_filt += `
-    <div class="form-check col-5 col-md-1 col-sm-1 ">
+    <div class="form-check col-5 col-lg-1 col-md-1  col-sm-1 ">
             <input class="form-check-input" type="checkbox" name="checkbox" value="${cat}" id="${cat}">
-            <label class="form-check-label" for="${cat}">
+            <label class="form-check-label " for="${cat}">
             ${cat}
             </label>
           </div>
@@ -117,7 +117,7 @@ search_form.addEventListener('submit', (e) => {
     <h1>sorry, we couldn't find your event</h1>
 </div>
 </div>`;
-    //  container_card.innerHTML = create_cards(screen_cards)
+    
 
   }
   else {
