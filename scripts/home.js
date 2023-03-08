@@ -117,7 +117,7 @@ search_form.addEventListener('submit', (e) => {
     <h1>sorry, we couldn't find your event</h1>
 </div>
 </div>`;
-    
+
 
   }
   else {

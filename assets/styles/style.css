@@ -230,27 +230,26 @@ footer h2 {
 
 
 .row-details {
-    border: 2px solid #C92C6D;
+    border: 3px solid #C92C6D;
     display: flex;
     flex-wrap: wrap;
     background-color: #444444;
+    box-shadow: 7px 3px 28px 4px #C92C6D;
+    -webkit-box-shadow: 7px 3px 28px 4px #C92C6D;
+    -moz-box-shadow: 7px 3px 28px 4px #C92C6D;
 
 
 }
 
 
-.container-details {
-    /* padding: 10%; */
 
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
 
 @media screen and (min-width: 1024px) {
     .card-text {
         max-height: 7vh;
 
     }
+    
 
 }
 @media screen and (max-width: 1024px) {

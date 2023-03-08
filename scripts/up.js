@@ -1,7 +1,7 @@
-const current_day=Date.parse(events.currentDate)
-let filter_up=events.events.filter((ev)=> (current_day <= Date.parse(ev.date)))
-for(const fil of filter_up){
-  console.log(Date.parse(fil.date)+"-" + fil.date+"-"+current_day);
+const current_day = Date.parse(events.currentDate)
+let filter_up = events.events.filter((ev) => (current_day <= Date.parse(ev.date)))
+for (const fil of filter_up) {
+  console.log(Date.parse(fil.date) + "-" + fil.date + "-" + current_day);
 }
 
 console.log(events.events[0]);
@@ -9,13 +9,13 @@ let form_categories = document.getElementById("form_categories")
 let filter = document.getElementById("filter")
 const all_categories = new Set((filter_up.map(eve => eve.category)).sort())
 let acumcat = []
-let screen_cards=filter_up
+let screen_cards = filter_up
 
 
 console.log(filter_up);
 function create_cards(events) {
   let card = ``
-  
+
   for (const event of events) {
 
     card += `<div  class="card-group ">
@@ -34,7 +34,7 @@ function create_cards(events) {
         </div>`;
 
   }
-  
+
 
   return card
 }
@@ -77,23 +77,23 @@ form_categories.addEventListener('submit', (e) => {
   e.preventDefault()
   let filter_event_cat = []
   let fil = []
-  acumcat=[]
+  acumcat = []
   fil = [e.target]
 
   for (let i = 0; i < all_categories.size; i++) { if (fil[0][i].checked == true) { acumcat.push(fil[0][i].id) } }
 
   filter_event_cat = events_filter_cat()
 
- 
+
   if (acumcat.length == 0) {
-    screen_cards=events.events
-    container_card.innerHTML = create_cards( screen_cards)
-    
+    screen_cards = events.events
+    container_card.innerHTML = create_cards(screen_cards)
+
   }
   else {
-    screen_cards=filter_event_cat
+    screen_cards = filter_event_cat
     container_card.innerHTML = create_cards(screen_cards)
-    
+
   }
 
 }
@@ -110,31 +110,31 @@ function events_filter_cat() {
 
 
 
-let search_form=document.getElementById("search_form")
+let search_form = document.getElementById("search_form")
 
-search_form.addEventListener('submit',(e)=>{
+search_form.addEventListener('submit', (e) => {
   e.preventDefault()
-  let value=[e.target][0][0].value;
+  let value = [e.target][0][0].value;
   console.log(value);
 
-  let event_search_filter= screen_cards.filter((eve)=>eve.name.toLowerCase().includes(value.toLowerCase()))
+  let event_search_filter = screen_cards.filter((eve) => eve.name.toLowerCase().includes(value.toLowerCase()))
   console.log(event_search_filter)
-   if(event_search_filter.length==0){
-   
-     container_card.innerHTML=`<div  class="card-group ">
+  if (event_search_filter.length == 0) {
+
+    container_card.innerHTML = `<div  class="card-group ">
     <div class="card m-1 " style="width: 18rem; ">
     
     <h1>sorry, we couldn't find your event</h1>
 </div>
 </div>`;
 
-  
+
   }
-  else{
+  else {
     container_card.innerHTML = create_cards(event_search_filter)
-    
+
   }
-  
+
 
 
 })
