@@ -448,6 +448,6 @@ const events = {
     ]
 
 }
-console.log("funciona");
+
 
 
