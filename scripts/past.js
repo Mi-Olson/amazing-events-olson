@@ -1,16 +1,41 @@
 
-const current_day = Date.parse(events.currentDate)
-let filter_past = events.events.filter((ev) => (current_day > Date.parse(ev.date)))
-
-for (const fil of filter_past) {
-  console.log(Date.parse(fil.date) + "-" + fil.date + "-" + current_day);
-}
-
+let container_card = document.getElementById("past_events");
 let form_categories = document.getElementById("form_categories")
 let filter = document.getElementById("filter")
-const all_categories = new Set((filter_past.map(eve => eve.category)).sort())
+let search_form = document.getElementById("search_form")
 let acumcat = []
-let screen_cards = filter_past
+let all_categories = []
+// let events=[]
+let filter_past = []
+let screen_cards = []
+
+let current_day = ""
+
+const API_URL = "https://mindhub-xj03.onrender.com/api/amazing";
+
+
+const getEvents = async () => {
+  try {
+    const get_events = await fetch(API_URL);
+    const events = await get_events.json();
+    current_day = await Date.parse(events.currentDate)
+
+    filter_past = await events.events.filter((ev) => (current_day > Date.parse(ev.date)))
+    all_categories = await new Set((filter_past.map(eve => eve.category)).sort())
+    screen_cards = await filter_past
+    container_card.innerHTML = create_cards(screen_cards)
+    form_categories.innerHTML = create_FilterCategories(all_categories)
+
+
+
+  }
+  catch (e) {
+    console.log("Error status", e);
+  }
+
+};
+getEvents();
+
 
 
 
@@ -42,10 +67,6 @@ function create_cards(events) {
 
 
 
-
-
-
-
 function create_FilterCategories(all_categories) {
   let cat_filt = ""
   for (const cat of all_categories) {
@@ -65,12 +86,6 @@ function create_FilterCategories(all_categories) {
   return cat_filt
 
 }
-form_categories.innerHTML = create_FilterCategories(all_categories)
-
-
-let container_card = document.getElementById("past_events");
-
-container_card.innerHTML = create_cards(screen_cards)
 
 
 
@@ -87,7 +102,7 @@ form_categories.addEventListener('submit', (e) => {
 
 
   if (acumcat.length == 0) {
-    screen_cards = events.events
+    screen_cards = filter_past
     container_card.innerHTML = create_cards(screen_cards)
 
   }
@@ -102,7 +117,7 @@ form_categories.addEventListener('submit', (e) => {
 
 function events_filter_cat() {
   let new_fil_cat = []
-  for (ev of events.events) {
+  for (ev of filter_past) {
     for (let i = 0; i < acumcat.length; i++) { if (ev.category === acumcat[i]) { new_fil_cat.push(ev) } }
   }
   return new_fil_cat
@@ -111,7 +126,7 @@ function events_filter_cat() {
 
 
 
-let search_form = document.getElementById("search_form")
+
 
 search_form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -119,7 +134,7 @@ search_form.addEventListener('submit', (e) => {
   console.log(value);
 
   let event_search_filter = screen_cards.filter((eve) => eve.name.toLowerCase().includes(value.toLowerCase()))
-  console.log(event_search_filter)
+
   if (event_search_filter.length == 0) {
 
     container_card.innerHTML = `<div  class="card-group ">

@@ -1,10 +1,36 @@
-
-console.log(events.events[0]);
+let container_card = document.getElementById("home");
 let form_categories = document.getElementById("form_categories")
 let filter = document.getElementById("filter")
-const all_categories = new Set((events.events.map(eve => eve.category)).sort())
 let acumcat = []
-let screen_cards = events.events
+let all_categories=[]
+let events=[]
+let screen_cards=[]
+let search_form = document.getElementById("search_form")
+
+
+const API_URL = "https://mindhub-xj03.onrender.com/api/amazing";
+
+
+const getEvents =async() => {
+    try{
+        const get_events= await fetch(API_URL);
+        events= await get_events.json();
+        all_categories = await new Set((events.events.map(eve => eve.category)).sort())
+        screen_cards = await events.events
+        container_card.innerHTML = create_cards(screen_cards)
+        form_categories.innerHTML = create_FilterCategories(all_categories)
+               
+
+
+    }
+    catch(e){
+        console.log("Error status", e);
+    }
+    
+};
+getEvents();
+
+
 
 
 
@@ -27,7 +53,7 @@ function create_FilterCategories(all_categories) {
   return cat_filt
 
 }
-form_categories.innerHTML = create_FilterCategories(all_categories)
+
 
 function create_cards(events) {
   let card = ``
@@ -57,9 +83,7 @@ function create_cards(events) {
 
 
 
-let container_card = document.getElementById("home");
 
-container_card.innerHTML = create_cards(screen_cards)
 
 
 
@@ -100,7 +124,7 @@ function events_filter_cat() {
 
 
 
-let search_form = document.getElementById("search_form")
+
 
 search_form.addEventListener('submit', (e) => {
   e.preventDefault()
