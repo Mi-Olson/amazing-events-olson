@@ -12,7 +12,7 @@ const getEvents = async () => {
   try {
     const get_events = await fetch(API_URL);
     events = await get_events.json();
-    console.log(events);
+   
 
     current_day = await Date.parse(events.currentDate)
 
@@ -103,29 +103,20 @@ function create_row_one() {
   let sort_capacity = (event_past_percentage.sort((a, b) => a.capacity - b.capacity)).reverse().slice(0, 3)
 
 
-  console.log("creciente", sort_capacity);
-
-  //falta ordenar
-  console.log(max_event_past_percentage);
-  console.log(min_event_past_percentage)
+  
   let row_table = ``
 
   for (let i = 0; i < 3; i++) {
-
+    
     row_table += `
-   <div class="row text-center" >
-   <div class="col  ">
-   ${max_event_past_percentage[i].name}          ${max_event_past_percentage[i].percentage}
-    </div>
-   
-    <div class="col ">
-    ${min_event_past_percentage[i].name}          ${min_event_past_percentage[i].percentage}
-    </div>
-    <div class="col">
-    ${sort_capacity[i].name}  capacity:         ${sort_capacity[i].capacity}
-    </div>
-  </div>
-  </div>`;
+    <tr >
+          
+    <td>  ${max_event_past_percentage[i].name}          ${max_event_past_percentage[i].percentage}</td>
+    <td>  ${min_event_past_percentage[i].name}          ${min_event_past_percentage[i].percentage}</td>
+    <td>  ${sort_capacity[i].name}  capacity:         ${sort_capacity[i].capacity}</td>
+  </tr>
+  `;
+  
 
   }
   return row_table
@@ -160,19 +151,12 @@ function create_row(array_1) {
     
 
     row_table += `
-     <div class="row text-center" >
-     <div class="col  ">
-     ${cat}       
-      </div>
-     
-      <div class="col ">
-        $   ${sum_cat}       
-      </div>
-      <div class="col">
-       ${porc}
-      </div>
-    </div>
-    </div>`;
+    <tr >
+    <td>  ${cat}               </td>
+    <td>   $   ${sum_cat}      </td>
+    <td>    ${porc}            </td>
+  </tr>
+    `;
 
   }
   return row_table

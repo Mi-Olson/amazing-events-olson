@@ -96,41 +96,16 @@ footer h2 {
     max-width: 30vw;
 }
 
-.table .col,
-.t-row {
-    border-top: 0.1px solid #444444;
-    border-left: 0.1px solid #444444;
 
-    height: 2rem;
-    font-size: .8em;
-    flex-wrap: wrap;
 
-}
-
-.t-col{
-    color: #C92C6D !important;
-}
-.table {
-    border-bottom: 0.1px solid #C92C6D;
-    border-right: 0.1px solid #C92C6D;
-    flex-wrap: wrap;
-
-}
-.stats_row{
-    flex-wrap: wrap;  
-    color: aqua; 
-   
-
-    
-    padding: left 2px;;
-}
-.t-row h4 {
+caption h4 {
     font-weight: 100;
-    height: 1.5rem;
+    min-height: 2rem;
     color: #EDEDED;
-    background-color: #444444;
+    background-color:  #C92C6D !important;
     font-family: 'Tourney', cursive;
     flex-wrap: wrap;
+    text-shadow: #C92C6D 1px 0 10px;
 
 }
 

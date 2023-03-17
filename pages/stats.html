@@ -61,68 +61,71 @@
       <i class="bi bi-arrow-bar-right i_start"></i>
     </div>
 
-     <div class="container text-start table table-sm mt-3">
-          <!-- first line -->
-      <div class="row t-row">
-        <h4 class="fs-5">Events statistics</h4>
-      </div>
-      <div class="row text-center">
-        <div class="col ">
-          <p class="t-col  ">Events whit the highets percentage of attendance</p>
-        </div>
-        <div class="col ">
-          <p class="t-col ">Events with lowresy percetage of attendance</p>
-        </div>
-        <div class="col ">
-          <p class="t-col ">Event with larger capacity</p>
-        </div>
-      </div>
+    <div class="container text-start table table-sm mt-3">
 
-      <div id="row_one">
+      <table class="table  table-bordered caption-top">
+        <caption > <h4 class="fs-4">Events statistics</h4></caption>
+       
+        <thead>
+          <tr  class="col-12">
+            <th scope="col" class="col-4 fs-6 text-center shadow">Events whit the highets percentage of attendance</th>
+            <th scope="col" class="col-4 fs-6 text-center shadow">Events with lowresy percetage of attendance</th>
+            <th scope="col" class="col-4 fs-6 text-center shadow">Event with larger capacity</th>
+            
+          </tr>
+        </thead>
+        <tbody id="row_one">
         
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="container text-start table table-sm mt-3 table-responsive">
+        <table class="table  table-bordered caption-top ">
+          <caption > <h4 class="fs-4">Upcoming events statistics by category</h4></caption>
+         
+          <thead>
+            <tr class="col-12">
+              <th scope="col" class="col-4  fs-6 text-center shadow">Categories</th>
+              <th scope="col" class="col-4 fs-6  text-center shadow">Revenues</th>
+              <th scope="col" class="col-4 fs-6 text-center shadow">Percentage of attendance</th>
+              
+            </tr>
+          </thead>
+          <tbody id="row_two">
+          
+            
+          </tbody>
+        </table>
+    </div>
+    <div class="container text-start table table-sm mt-3 table-responsive">
+      <table class="table  table-bordered caption-top ">
+        <caption > <h4 class="fs-4">Past Events statistic by category</h4></caption>
        
-      </div>
-      <!-- second line -->
-      <div class="row t-row">
-        <h4 class="fs-5">Upcoming events statistics by category</h4>
-      </div>
-      <div class="row text-center">
-        <div class="col">
-          <p class="t-col"">Categories</p>
-        </div>
-        <div class="col">
-          <p class="t-col">Revenues</p>
-        </div>
-        <div class="col">
-          <p class="t-col">Percentage of attendance</p>
-        </div>
-      </div>
+        <thead>
+          <tr class="col-12">
+            <th scope="col" class="col-4 fs-6 text-center shadow">Categories</th>
+            <th scope="col" class="col-4 fs-6 text-center shadow">Revenues</th>
+            <th scope="col" class="col-4 fs-6 text-center shadow">Percentage of attendance</th>
+            
+          </tr>
+        </thead>
+        <tbody id="row_three">
+        
+          
+        </tbody>
+      </table>
+  </div>
 
-
-      <div id="row_two">
-       
-      </div>
-      <!-- third line -->
-      <div class="row t-row ">
-        <h4 class="fs-5">Past Events statistic by category</h4>
-      </div>
-      <div class="row text-center">
-        <div class="col">
-          <p class="t-col">Categories</p>
-        </div>
-        <div class="col">
-          <p class="t-col">Revenues</p>
-        </div>
-        <div class="col">
-          <p class="t-col">Percentage of attendance</p>
-        </div>
-      </div>
-      <div id="row_three">
-       
-      </div>
-
-    </div> 
   
+     
+
+
+
+     
+    
+
+ 
 
 
 
@@ -152,7 +155,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-    <script src="../scripts/stats.js"></script>
+  <script src="../scripts/stats.js"></script>
 
 
 </body>
