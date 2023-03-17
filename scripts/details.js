@@ -1,23 +1,44 @@
-console.log([document]);
+const API_URL = "https://mindhub-xj03.onrender.com/api/amazing";
 
+const div_card = document.getElementById("card_one")
 const queryId = location.search
 console.log(queryId);
 const params = new URLSearchParams(queryId)
-console.log(params);
 const id = params.get("id")
-console.log("id" + id)
-
-const one_event = events.events.find(ev => ev._id == id)
-
-
-
+let one_event = ""
 let result_est_ass = []
-result_est_ass = calculate()
+
+
+const getEvents = async () => {
+  try {
+    const get_events = await fetch(API_URL);
+    events = await get_events.json();
+
+
+    one_event = await events.events.find(ev => ev._id == id)
+
+    result_est_ass = calculate()
+    create_card()
+
+
+
+  }
+  catch (e) {
+    console.log("Error status", e);
+  }
+
+};
+getEvents();
+
+
+
+
+
 
 
 function calculate() {
   let result = []
-  // result=one_event.assistance || one_event.estimate
+
   result[0] = one_event.assistance
   result[1] = "assistance"
   if (result[0] == undefined) {
@@ -27,8 +48,7 @@ function calculate() {
   return result
 }
 
-
-const div_card = document.getElementById("card_one")
+function create_card(){
 div_card.innerHTML = `<div class="row-details m-3 ">
 <div class="col-12  col-md-4 col-sm-4 p-3 " >
 <img class=" col-12 " src="${one_event.image}" alt="${one_event.category}">
@@ -50,5 +70,5 @@ div_card.innerHTML = `<div class="row-details m-3 ">
 </div>`
 
 
-
+}
 
