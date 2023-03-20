@@ -96,7 +96,10 @@ footer h2 {
     max-width: 30vw;
 }
 
-
+.category_label{
+    font-size: 1em;
+    margin-right: 1em;
+}
 
 caption h4 {
     font-weight: 100;
@@ -234,6 +237,10 @@ caption h4 {
     .card-text {
         max-height: 7vh;
 
+    }
+    .category_label{
+        font-size: .7em;
+        margin-right: 1em;
     }
     
 
