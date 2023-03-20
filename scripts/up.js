@@ -73,8 +73,9 @@ function create_FilterCategories(all_categories) {
     console.log(cat);
     cat_filt += `
     <div class="form-check col-5 col-md-1 col-sm-1">
+           
+            <label class="form-check-label category_label" for="${cat}"> 
             <input class="form-check-input" type="checkbox" name="checkbox" value="${cat}" id="${cat}">
-            <label class="form-check-label" for="${cat}">
             ${cat}
             </label>
           </div>

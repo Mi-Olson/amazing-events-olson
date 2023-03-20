@@ -48,11 +48,12 @@ function calculate() {
   return result
 }
 
-function create_card(){
-div_card.innerHTML = `<div class="row-details m-3 ">
-<div class="col-12  col-md-4 col-sm-4 p-3 " >
-<img class=" col-12 " src="${one_event.image}" alt="${one_event.category}">
+function create_card() {
+  div_card.innerHTML = `<div class="row-details m-3 ">
+<div class=" col-12  col-md-4 col-sm-4 p-1  border border-light" >
+<img class="  col-12  " src="${one_event.image}" alt="${one_event.category}">
 </div>
+
 <div class="col-12 col-md-8 col-sm-8 text-center p-3 ">
   <h1 class="line shadow ">${one_event.name}</h1>
   <p class="pt-4 h5 ">Date : ${one_event.date} </p>

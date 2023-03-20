@@ -2,31 +2,31 @@ let container_card = document.getElementById("home");
 let form_categories = document.getElementById("form_categories")
 let filter = document.getElementById("filter")
 let acumcat = []
-let all_categories=[]
-let events=[]
-let screen_cards=[]
+let all_categories = []
+let events = []
+let screen_cards = []
 let search_form = document.getElementById("search_form")
 
 
 const API_URL = "https://mindhub-xj03.onrender.com/api/amazing";
 
 
-const getEvents =async() => {
-    try{
-        const get_events= await fetch(API_URL);
-        events= await get_events.json();
-        all_categories = await new Set((events.events.map(eve => eve.category)).sort())
-        screen_cards = await events.events
-        container_card.innerHTML = create_cards(screen_cards)
-        form_categories.innerHTML = create_FilterCategories(all_categories)
-               
+const getEvents = async () => {
+  try {
+    const get_events = await fetch(API_URL);
+    events = await get_events.json();
+    all_categories = await new Set((events.events.map(eve => eve.category)).sort())
+    screen_cards = await events.events
+    container_card.innerHTML = create_cards(screen_cards)
+    form_categories.innerHTML = create_FilterCategories(all_categories)
 
 
-    }
-    catch(e){
-        console.log("Error status", e);
-    }
-    
+
+  }
+  catch (e) {
+    console.log("Error status", e);
+  }
+
 };
 getEvents();
 

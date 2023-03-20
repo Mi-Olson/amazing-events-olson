@@ -96,7 +96,7 @@ footer h2 {
     max-width: 30vw;
 }
 
-.category_label{
+.category_label {
     font-size: 1em;
     margin-right: 1em;
 }
@@ -105,7 +105,7 @@ caption h4 {
     font-weight: 100;
     min-height: 2rem;
     color: #EDEDED;
-    background-color:  #C92C6D !important;
+    background-color: #C92C6D !important;
     font-family: 'Tourney', cursive;
     flex-wrap: wrap;
     text-shadow: #C92C6D 1px 0 10px;
@@ -213,16 +213,15 @@ caption h4 {
 
 }
 
-/* .hidden{
-    display: none;
-} */
 
 
 .row-details {
     border: 3px solid #C92C6D;
+    
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    background-color: #444444;
+    background-color:black;
     box-shadow: 7px 3px 28px 4px #C92C6D;
     -webkit-box-shadow: 7px 3px 28px 4px #C92C6D;
     -moz-box-shadow: 7px 3px 28px 4px #C92C6D;
@@ -238,13 +237,15 @@ caption h4 {
         max-height: 7vh;
 
     }
-    .category_label{
+
+    .category_label {
         font-size: .7em;
         margin-right: 1em;
     }
-    
+
 
 }
+
 @media screen and (max-width: 1024px) {
     .scroller {
         height: 300px;
@@ -252,4 +253,3 @@ caption h4 {
         scroll-snap-type: y mandatory;
     }
 }
-
