@@ -97,12 +97,17 @@ function sort_events(array) {
   return event_past_sort
 }
 
+
 function create_row_one() {
-  let max_event_past_percentage = event_past_percentage.reverse().slice(0, 3)
+
+  
+  let max_event_past_percentage = event_past_percentage.slice(-3)
+ 
+
   let min_event_past_percentage = event_past_percentage.slice(0, 3)
   let sort_capacity = (event_past_percentage.sort((a, b) => a.capacity - b.capacity)).reverse().slice(0, 3)
 
-
+   
 
   let row_table = ``
 

@@ -125,6 +125,19 @@ caption h4 {
     -moz-box-shadow: -8px -18px 20px 20px #C92C6D;
 
 }
+.squareDay {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #f7f328;
+    animation-name: brilloDos;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    box-shadow: -8px -18px 20px 20px #f7f328;
+    -webkit-box-shadow: -8px -18px 20px 20px #f7f328;
+    -moz-box-shadow: -8px -18px 20px 20px#f7f328;
+
+}
 
 .one {
 
