@@ -14,19 +14,19 @@ const getEvents = async () => {
     events = await get_events.json();
 
 
-    current_day = await Date.parse(events.currentDate)
+    current_day =  Date.parse(events.currentDate)
 
-    filter_past = await events.events.filter((ev) => (current_day > Date.parse(ev.date)))
-    filter_up = await events.events.filter((ev) => (current_day <= Date.parse(ev.date)))
+    filter_past =  events.events.filter((ev) => (current_day > Date.parse(ev.date)))
+    filter_up =  events.events.filter((ev) => (current_day <= Date.parse(ev.date)))
 
-    let event_past = await events_percentage(filter_past)
-    let event_up = await events_percentage(filter_up)
+    let event_past =  events_percentage(filter_past)
+    let event_up = events_percentage(filter_up)
 
-    event_past_percentage = await sort_events(event_past)
-    event_up_percentage = await sort_events(event_up)
-    container_one.innerHTML = await create_row_one()
-    container_two.innerHTML = await create_row(event_up_percentage)
-    container_three.innerHTML = await create_row(event_past_percentage)
+    event_past_percentage =  sort_events(event_past)
+    event_up_percentage =  sort_events(event_up)
+    container_one.innerHTML =  create_row_one()
+    container_two.innerHTML =  create_row(event_up_percentage)
+    container_three.innerHTML =  create_row(event_past_percentage)
 
 
 
