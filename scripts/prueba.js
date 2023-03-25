@@ -6,7 +6,7 @@ const select_body=document.getElementById("miBody")
 
 const check_modo=localStorage.getItem("day_mode")
 
-console.log(location.pathname.includes("index"));
+// console.log(location.pathname.includes("index"));
 if(location.pathname.includes("index") && check_modo== undefined){
     localStorage.setItem("day_mode", false)
 }
@@ -20,19 +20,9 @@ if(check_modo){
         card.classList.add("card_day")
        
         }
-    
-    // hacer_dia() 
-    for (farol of faroles){
        
-       
-        farol.classList.add("squareDay")
-        //  }
-    }
-   
-
-}
-
-
+    for (farol of faroles){       farol.classList.add("squareDay")       }
+ }
 }
 
 
@@ -49,20 +39,13 @@ function hacer_dia_o_noche(){
    
     select_body.classList.toggle("body_day")//no funciona
     select_body.classList.toggle("body_dark")
-    for (tabla of tabla_stats){
-    tabla.classList.toggle("body_dark")
-    }
+    for (tabla of tabla_stats){    tabla.classList.toggle("body_dark")    }
     for(card of todas_las_card){
     card.classList.toggle("card_day")
     card.classList.toggle("card_dark")
 
     }
-    for (farol of faroles){
-    
-       
-        farol.classList.toggle("squareDay")
-        //  }
-    }
+    for (farol of faroles){   farol.classList.toggle("squareDay")    }
 }
 function set_local_storage(){
     if (localStorage.getItem("day_mode")){

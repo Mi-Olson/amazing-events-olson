@@ -30,9 +30,6 @@ const getEvents = async () => {
 
 
 
-    console.log(event_past_percentage);
-    console.log(event_up_percentage);
-
   }
   catch (e) {
     console.log("Error status", e);
