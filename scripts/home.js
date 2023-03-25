@@ -39,7 +39,7 @@ function create_FilterCategories(all_categories) {
   for (const cat of all_categories) {
     console.log(cat);
     cat_filt += `
-    <div class="form-check col-5 col-lg-1 col-md-1  col-sm-1 ">
+    <div class="form-check col-5 col-lg-1 col-md-1  col-sm-1">
            
             <label class="form-check-label category_label" for="${cat}">
             <input class="form-check-input" type="checkbox" name="checkbox" value="${cat}" id="${cat}">
@@ -62,19 +62,19 @@ function create_cards(events) {
   for (const event of events) {
 
     card += `<div  class="card-group ">
-             <div class="card m-1 " style="width: 18rem; ">
-              <img src="${event.image}" class="card-img-top p-3" style="max-height: 7vh" alt="${event.category}">
-        <div class="card-body ">
-          <h5 class="card-title text-center" style="min-height: 7vh;">${event.name}</h5>
-          <p class="card-text text-center scroller " style="min-height: 9vh;max-height: 9vh;" >${event.description}
-          </p>
-          <div class="navbar card-footer ">
-            <p class=" mb-0">Price U$S ${event.price}</p>
-            <a href="./pages/details.html?id=${event._id}" class="btn btn-sm btn-new mt-1">More Info</a>
-          </div>
-        </div>
-        </div>
-        </div>`;
+                <div class="card m-1 " style="width: 18rem; ">
+                   <img src="${event.image}" class=" card-img-top p-3 " style="max-height: 7vh" alt="${event.category}">
+                     <div class="card-body   ">
+                         <h5 class="card-title text-center" style="min-height: 7vh;">${event.name}</h5>
+                          <p class="card-text text-center scroller  " style="min-height: 9vh;max-height: 9vh;" >${event.description}
+                          </p>
+                         <div class="navbar card-footer ">
+                             <p class=" mb-0 ">Price U$S ${event.price}</p>
+                             <a href="./pages/details.html?id=${event._id}" class="btn btn-sm btn-new mt-1">More Info</a>
+                         </div>
+                     </div>
+                </div>
+           </div>`;
 
   }
 

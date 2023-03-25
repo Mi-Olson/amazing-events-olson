@@ -20,7 +20,7 @@
   <title>Stats</title>
 </head>
 
-<body>
+<body class="dark_mode" id="miBody">
   <header>
     <nav class="navbar line navbar-expand-lg">
 
@@ -56,14 +56,15 @@
   </header>
   <main class="pb-3">
     <div class=" navbar line container-fluid ">
-      <i class="bi bi-arrow-bar-left i_start"></i>
-      <h1 class="shadow">STATS</h1>
-      <i class="bi bi-arrow-bar-right i_start"></i>
+      <i class="col-2 bi bi-arrow-bar-left i_start"></i>
+      <h1 class="col-8  text-center shadow">STATS</h1>
+      <i  class="col-1 text-center"  id="felicidad">🤩</i>
+      <i class="col-1 bi bi-arrow-bar-right i_start text-end"></i>
     </div>
 
     <div class="container text-start table table-sm mt-3">
 
-      <table class="table  table-bordered caption-top">
+      <table class="table  table-bordered caption-top table_dark" >
         <caption>
           <h4 class="fs-4">Events statistics</h4>
         </caption>
@@ -71,7 +72,7 @@
         <thead>
           <tr class="col-12">
             <th scope="col" class="col-4 fs-6 text-center shadow">Events whit the highets percentage of attendance</th>
-            <th scope="col" class="col-4 fs-6 text-center shadow">Events with lowresy percetage of attendance</th>
+            <th scope="col" class="col-4 fs-6 text-center shadow">Events with lowest percetage of attendance</th>
             <th scope="col" class="col-4 fs-6 text-center shadow">Event with larger capacity</th>
 
           </tr>
@@ -83,7 +84,7 @@
       </table>
     </div>
     <div class="container text-start table table-sm mt-3 table-responsive">
-      <table class="table  table-bordered caption-top ">
+      <table class="table  table-bordered caption-top table_dark">
         <caption>
           <h4 class="fs-4">Upcoming events statistics by category</h4>
         </caption>
@@ -103,7 +104,7 @@
       </table>
     </div>
     <div class="container text-start table table-sm mt-3 table-responsive">
-      <table class="table  table-bordered caption-top ">
+      <table class="table  table-bordered caption-top table_dark">
         <caption>
           <h4 class="fs-4">Past Events statistic by category</h4>
         </caption>
@@ -161,6 +162,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+    <script src="../scripts/prueba.js"></script>
   <script src="../scripts/stats.js"></script>
 
 

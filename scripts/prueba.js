@@ -1,64 +1,83 @@
-
-const path_=location.pathname
-console.log(location.pathname);
+const tabla_stats=document.getElementsByClassName("table_dark")
 const felicidad=document.getElementById("felicidad")
-const contenedor_faroles=document.querySelectorAll("#contenedor_faroles")[0].children
-console.log(contenedor_faroles);
-const params_path_name=new URLSearchParams(path_)
+const faroles=document.getElementsByClassName("square")
+const todas_las_card=document.getElementsByClassName("card-body")
+const select_body=document.getElementById("miBody")
 
-console.log(params_path_name);
+const check_modo=localStorage.getItem("day_mode")
 
-const setUserInLocalStorage = () => {
-    //Acá iría la lógica asociada a esta función que además guardará info en el local storage
-  
-   
-    localStorage.setItem("dark_mode", false)
-    // {"username":"Tuki","password":"123456"}
-    
+console.log(location.pathname.includes("index"));
+if(location.pathname.includes("index") && check_modo== undefined){
+    localStorage.setItem("day_mode", false)
 }
-setUserInLocalStorage()
+else{
+const check_modo=localStorage.getItem("day_mode")
+if(check_modo){
+    select_body.classList.remove("body_dark")
+    select_body.classList.add("body_day")
+    for(card of todas_las_card){
+        card.classList.remove("card_dark")
+        card.classList.add("card_day")
+       
+        }
+    
+    // hacer_dia() 
+    for (farol of faroles){
+       
+       
+        farol.classList.add("squareDay")
+        //  }
+    }
+   
+
+}
+
+
+}
+
 
 felicidad.addEventListener("click",()=>
 
 {
-    console.log(contenedor_faroles);
-    for (farol of contenedor_faroles){
-        console.log([farol]);
-        //  if([farol][0].toString().includes("square")){
+    
+    hacer_dia_o_noche() 
+    set_local_storage()
+})
+
+
+function hacer_dia_o_noche(){
+   
+    select_body.classList.toggle("body_day")//no funciona
+    select_body.classList.toggle("body_dark")
+    for (tabla of tabla_stats){
+    tabla.classList.toggle("body_dark")
+    }
+    for(card of todas_las_card){
+    card.classList.toggle("card_day")
+    card.classList.toggle("card_dark")
+
+    }
+    for (farol of faroles){
+    
+       
         farol.classList.toggle("squareDay")
         //  }
     }
-    // felicidad.classList.toggle("square")
-    // felicidad.classList.toggle("squareDay")
-    if (localStorage.getItem("dark_mode")){
-        localStorage.setItem("dark_mode", true)
+}
+function set_local_storage(){
+    if (localStorage.getItem("day_mode")){
+        localStorage.setItem("day_mode", true)
     }
     else{
-        localStorage.setItem("dark_mode", false)
+        localStorage.setItem("day_mode", false)
 
     }
 
-    })
-
-
-
-
-
-
-
-const getUserFromLocalStorage = () => {
-    // const username = localStorage.getItem("username")
-    // const password = localStorage.getItem("password")
-    const dark_mode = JSON.parse(localStorage.getItem("dark_mode"));
-
-    // console.log("username", username)
-    // console.log("password", password)
-    console.log("modo", dark_mode)
+     
 }
-getUserFromLocalStorage()
 
-// const usernameInLocalStorage = localStorage.getItem("username")
-//  console.log("usernameInLocalStorage", usernameInLocalStorage)
-//  console.log(localStorage.getItem("username"));
+
+
+
 
 

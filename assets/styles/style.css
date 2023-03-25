@@ -2,8 +2,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: black;
-    color: aliceblue;
+    /* background-color: black;
+    color: aliceblue; */
 
 
     /*
@@ -14,6 +14,7 @@
    color:#C92C6D;
     */
 }
+
 
 header img {
     width: 20vh;
@@ -35,9 +36,10 @@ main {
 }
 
 .shadow {
-    /* color:#C92C6D; */
+    
     text-shadow: #C92C6D 1px 0 10px;
     font-family: 'Tourney', cursive;
+    box-shadow: none !important;
 
 }
 
@@ -125,7 +127,7 @@ caption h4 {
     -moz-box-shadow: -8px -18px 20px 20px #C92C6D;
 
 }
-/* .squareDay {
+.squareDay {
     width: 10px;
     height: 10px;
     border-radius: 10px;
@@ -136,8 +138,35 @@ caption h4 {
     box-shadow: -8px -18px 20px 20px #f7f328;
     -webkit-box-shadow: -8px -18px 20px 20px #f7f328;
     -moz-box-shadow: -8px -18px 20px 20px#f7f328;
+    
+}
+.body_day{
+    /* background-color: white !important; */
+    background-color: rgb(63, 194, 194);
+    color: black !important;
+    
+   
+    
+}
+.body_dark{
+    background-color: black !important;
+    color: aliceblue !important;
+    
+    }
+.card_day{
+    /* background-color: white !important; */
+    background-color: rgb(246, 252, 252) !important;
+    color: black !important;
+    
+   
+    
+}
 
-} */
+.card_dark{
+        background-color: black !important;
+        color: aliceblue !important;
+        
+        }
 
 .one {
 
@@ -226,7 +255,9 @@ caption h4 {
 
 }
 
-
+/* .table{
+       color:var(--bs-table-color);
+} */
 
 .row-details {
     border: 3px solid #C92C6D;
