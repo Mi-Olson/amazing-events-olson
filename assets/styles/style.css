@@ -1,24 +1,299 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: black;
-    color: aliceblue;
-    
+    /* background-color: black;
+    color: aliceblue; */
+
+
     /*
     color: #EDEDED;
     color: #444444;
     color:#171717;
     color:#DA0037
+   color:#C92C6D;
     */
 }
-header img{
-    width: 30%;
+
+
+header img {
+    width: 20vh;
+
+
+}
+
+.line {
+    border-bottom: 1px solid #EDEDED;
+
+}
+
+main {
+    min-height: 80vh;
+}
+
+.img {
+    transform-origin: bottom right 60px;
+}
+
+.shadow {
+    
+    text-shadow: #C92C6D 1px 0 10px;
+    font-family: 'Tourney', cursive;
+    box-shadow: none !important;
+
+}
+
+footer {
+    border-top: 2px solid #444444;
+    border-bottom: 2px solid #444444;
+
+}
+
+footer h2 {
+    font-style: italic;
+}
+
+.btn-new,
+.btn-secondary:hover {
+    border: 1px solid #C92C6D;
+    color: #C92C6D;
+    background-color: transparent;
+
+}
+
+.btn-new:hover,
+.btn-secondary {
+    border: 1px solid #C92C6D;
+    color: #EDEDED;
+    background-color: #C92C6D;
+}
+
+.i_start {
+    font-size: 40px;
+}
+
+.card-img-top {
+    min-height: 168px;
+    width: auto;
+}
+
+.card-title {
+    font-family: 'Tourney', cursive;
+    text-shadow: #C92C6D 1px 0 10px;
+}
+
+.card-group {
+    border-radius: 8px;
+    border: 1px solid #444444 !important;
+    box-shadow: 7px 3px 28px 4px #C92C6D;
+    -webkit-box-shadow: 7px 3px 28px 4px #C92C6D;
+    -moz-box-shadow: 7px 3px 28px 4px #C92C6D;
+}
+
+.card {
+    border: none;
+}
+
+.contact {
+    max-width: 30vw;
+}
+
+.category_label {
+    font-size: 1em;
+    margin-right: 1em;
+}
+
+caption h4 {
+    font-weight: 100;
+    min-height: 2rem;
+    color: #EDEDED;
+    background-color: #C92C6D !important;
+    font-family: 'Tourney', cursive;
+    flex-wrap: wrap;
+    text-shadow: #C92C6D 1px 0 10px;
+
+}
+
+.square {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #C92C6D;
+    animation-name: brilloDos;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    box-shadow: -8px -18px 20px 20px #C92C6D;
+    -webkit-box-shadow: -8px -18px 20px 20px #C92C6D;
+    -moz-box-shadow: -8px -18px 20px 20px #C92C6D;
+
+}
+.squareDay {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #f7f328;
+    animation-name: brilloDos;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    box-shadow: -8px -18px 20px 20px #f7f328;
+    -webkit-box-shadow: -8px -18px 20px 20px #f7f328;
+    -moz-box-shadow: -8px -18px 20px 20px#f7f328;
     
 }
-.line{
-    border-bottom: 1px solid #EDEDED;
+.body_day{
+    /* background-color: white !important; */
+    background-color: rgb(63, 194, 194);
+    color: black !important;
+    
+   
+    
 }
-i{
-    width: 100%;
+.body_dark{
+    background-color: black !important;
+    color: aliceblue !important;
+    
+    }
+.card_day{
+    /* background-color: white !important; */
+    background-color: rgb(246, 252, 252) !important;
+    color: black !important;
+    
+   
+    
+}
+
+.card_dark{
+        background-color: black !important;
+        color: aliceblue !important;
+        
+        }
+
+.one {
+
+
+    animation-name: brilloDos;
+}
+
+.two {
+
+    animation-name: brilloTres;
+
+}
+
+.three {
+    animation-name: brillo;
+
+}
+
+
+
+
+
+@keyframes brillo {
+    0% {
+        transform: scale(1.5);
+    }
+
+    30% {
+        transform: scale(1.0);
+    }
+
+    68%,
+    72% {
+        transform: scale(0.50);
+    }
+
+    100% {
+        transform: scale(0.0);
+    }
+}
+
+@keyframes brilloDos {
+    0% {
+        transform: scale(0.0);
+    }
+
+    30% {
+        transform: scale(.5);
+    }
+
+    68%,
+    72% {
+        transform: scale(1.0);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes brilloTres {
+    0% {
+        transform: scale(1.0);
+    }
+
+    30% {
+        transform: scale(0.0);
+    }
+
+    68%,
+    72% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+
+
+}
+
+/* .table{
+       color:var(--bs-table-color);
+} */
+
+.row-details {
+    border: 3px solid #C92C6D;
+    
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:black;
+    box-shadow: 7px 3px 28px 4px #C92C6D;
+    -webkit-box-shadow: 7px 3px 28px 4px #C92C6D;
+    -moz-box-shadow: 7px 3px 28px 4px #C92C6D;
+
+
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .card-text {
+        max-height: 7vh;
+
+    }
+
+    .category_label {
+        font-size: .7em;
+        margin-right: 1em;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .scroller {
+        height: 300px;
+        overflow-y: none;
+        scroll-snap-type: y mandatory;
+    }
 }
